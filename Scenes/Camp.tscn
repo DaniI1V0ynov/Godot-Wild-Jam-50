@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Camp/Background Shadows.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Camp/Background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Camp/Final Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Camp/Barrier.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Camp/Tree part.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Sounds/Ambience1demo.mp3" type="AudioStream" id=8]
 
 [node name="Camp" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -20,6 +21,7 @@ transform = Transform2D( 0.1, 0, 0, 0.1, 0, 0 )
 scale = Vector2( 1, 1 )
 
 [node name="Camp base layer" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1084, 368 )
 
 [node name="Light" parent="." instance=ExtResource( 4 )]
 scale = Vector2( 0.04, 0.04 )
@@ -29,5 +31,9 @@ scale = Vector2( 0.04, 0.04 )
 [node name="Barrier" parent="." instance=ExtResource( 6 )]
 
 [node name="Tree part" parent="." instance=ExtResource( 7 )]
+
+[node name="LocationAmbience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [editable path="Background Shadows"]
